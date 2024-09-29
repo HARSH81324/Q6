@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        h2 {
+            text-align: center;
+            color: black;
+            font-weight: bolder;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 35px;
+        }
+
+        .rating {
+            display: inline-block;
+           
+           
+        }
+        .align{
+            margin-left: 30px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background:linear-gradient( rgb(207, 45, 45),rgb(184, 155, 155),rgb(207, 45, 45))
+        }
+
+        form {
+            max-width: 530px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        #checkbox{
+            margin-left:-250px;
+        }
+        .tick{
+            margin-left: -260px;
+            font-weight: bold;
+        }
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        #submit{
+            background-color: rgb(33, 168, 33);
+            color: white;
+        }
+        #submit:hover{
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        button {
+            padding: 10px 15px;
+            margin-left: 240px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Feedback Form</h2>
+    <form id="applicationForm">
+        <label for="FeedbackType">Feedback Type:</label>
+        <select id="FeedbackType" name="FeedbackType">
+            <option value="compliment">compliment</option>
+            <option value="average">average</option>
+            <option value="bad">bad</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <label>Website Rating:</label>
+        <label class="rating"><input type="radio" name="Websiterating" value="Excellent" required> <i class="align">Excellent</i></label>
+        <label class="rating"><input type="radio" name="Websiterating" value="Good"><i class="align">Good</i></label>
+        <label class="rating"><input type="radio" name="Websiterating" value="Average"><i class="align">Average</i></label>
+        <label class="rating"><input type="radio" name="Websiterating" value="Poor"><i class="align">Poor</i></label>
+
+        <label for="age">Age(10-100): </label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password (min. 8 chracters):</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="websiteurl">Website URL (optional) :</label>
+        <input type="url" id="websiteurl" name="websiteurl">
+
+         <input type="checkbox" id="checkbox" name="checkbox"> <i class="tick"> i agree to the terms and conditions </i><br>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+
+</html>
